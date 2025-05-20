@@ -5,7 +5,7 @@ public class Vehicle {
     private int year;
     private String make;
     private String model;
-    private String vehicleType;
+    private String vehicleType; //car, truck, etc.
     private String color;
     private int odometer;
     private double price;
@@ -85,4 +85,8 @@ public class Vehicle {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public String toString() {
+        return String.format("VIN: %d | Year: %d | Make: %s | Model: %s | Type: %s | Color: %s | Odometer: %d | Price: $%.2f",
+                vin, year, make, model, vehicleType, color, odometer, price);    }
 }
